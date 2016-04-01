@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Messaging.Queue.Provider</id>
+        <version>1.0.0</version>
+        <title>Messaging Queue Provider</title>
+        <authors>Bruno Brandes</authors>
+        <owners>Bruno Brandes</owners>
+        <licenseUrl>https://github.com/brunobrandes/messaging-queue-provider</licenseUrl>
+        <projectUrl>https://github.com/brunobrandes/messaging-queue-provider</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>NET application that sends and receives messages to and from queue services</description>
+        <releaseNotes>This release contains the service bus and microsoft message queue providers implemented</releaseNotes>
+        <language>pt-BR</language>
+        <dependencies>
+            <group targetFramework=".NETFramework4.5.1">
+                <dependency id="Newtonsoft.Json" version="8.0.3" />
+                <dependency id="Microsoft.WindowsAzure.ConfigurationManager" version="3.2.1" />
+                <dependency id="WindowsAzure.ServiceBus" version="3.1.5" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\Messaging.Queue.Provider.Domain.Enum.dll" target="lib\net451" />
+		<file src="bin\Release\Messaging.Queue.Provider.Domain.Enum.pdb" target="lib\net451" />
+		
+		<file src="bin\Release\Messaging.Queue.Provider.Domain.Service.dll" target="lib\net451" />
+		<file src="bin\Release\Messaging.Queue.Provider.Domain.Service.pdb" target="lib\net451" />
+		
+		<file src="bin\Release\Messaging.Queue.Provider.Infrastructure.dll" target="lib\net451" />
+		<file src="bin\Release\Messaging.Queue.Provider.Infrastructure.pdb" target="lib\net451" />
+    </files>
+</package>
