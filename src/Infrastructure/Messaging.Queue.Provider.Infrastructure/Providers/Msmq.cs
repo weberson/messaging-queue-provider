@@ -214,7 +214,7 @@ namespace Messaging.Queue.Provider.Infrastructure.Providers
                 };
             }
         }
-
+        
         public async Task<QueueMessage<T>> ReceiveAsync(TimeSpan timeout)
         {
             if (timeout == TimeSpan.Zero)
@@ -260,7 +260,10 @@ namespace Messaging.Queue.Provider.Infrastructure.Providers
             }
         }
 
-
+        public async Task PurgeAsync()
+        {
+            await _messageQueue.PurgeAsync();
+        }
 
         #endregion
     }

@@ -14,5 +14,7 @@ namespace Messaging.Queue.Provider.Domain.Service.Interfaces.Providers
         Task<string> PushAsync(int correlationId, string body, MessagePriority priority);
 
         Task<string> PushAsync(int correlationId, string label, string body, MessagePriority priority);
+
+        Task PurgeAsync();
     }
 }

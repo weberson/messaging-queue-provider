@@ -23,10 +23,15 @@ namespace Messaging.Queue.Provider.Infrastructure.Extensions
         {
             return Task.Factory.FromAsync(messageQueue.BeginPeek(), r => messageQueue.EndPeek(r));
         }
-        
+
         public static Task<System.Messaging.Message> PeekAsync(this MessageQueue messageQueue, TimeSpan timeout)
         {
             return Task.Factory.FromAsync(messageQueue.BeginPeek(timeout), r => messageQueue.EndPeek(r));
+        }
+        public static Task PurgeAsync(this MessageQueue messageQueue)
+        {
+            messageQueue.Purge();
+            return Task.FromResult<object>(null);
         }
     }
 }
